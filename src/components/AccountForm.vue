@@ -45,10 +45,11 @@
                         <span class="error-msg">{{ acc.errors.password }}</span>
                     </div>
                 </div>
-
-                <button class="remove-btn" title="Удалить" @click="removeAccount(acc.id)">
-                    <img :src="recyclebinIcon" alt="Удалить" class="remove-icon-img" />
-                </button>
+                <div class="form-group">
+                    <button class="remove-btn" title="Удалить" @click="removeAccount(acc.id)">
+                        <img :src="recyclebinIcon" alt="Удалить" class="remove-icon-img" />
+                    </button>
+                </div>
             </div>
         </div>
 
@@ -159,7 +160,7 @@ onMounted(() => {
     min-height: 50px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     gap: 5px;
 }
 
@@ -188,14 +189,13 @@ select.error {
 
 .remove-btn {
     align-self: center;
-    margin-bottom: 15px;
     border: none;
     border-radius: 5px;
 }
 
 .remove-icon-img {
-    width: 22px;
-    height: 22px;
+    width: 17px;
+    height: 19px;
 }
 
 
